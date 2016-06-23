@@ -1,7 +1,7 @@
 require ${PN}.inc
 
 S = "${WORKDIR}/git"
-SRCREV = "f36e0abb9796530a80937057eed2985f652d37f2"
+SRCREV = "${AUTOREV}"
 SRC_URI = "git://git.osmocom.org/libosmocore.git;protocol=git;nobranch=1"
 PV = "0.12.1+gitr${SRCPV}"
 PR = "r0"
