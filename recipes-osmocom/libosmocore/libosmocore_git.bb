@@ -3,7 +3,7 @@ require ${PN}.inc
 S = "${WORKDIR}/git"
 SRCREV = "${AUTOREV}"
 SRC_URI = "git://git.osmocom.org/libosmocore.git;protocol=git;nobranch=1"
-PV = "0.9.0+gitr${SRCPV}"
+PV = "0.9.6+gitr${SRCPV}"
 PR = "r1"
 
 DEPENDS += "libtalloc"
