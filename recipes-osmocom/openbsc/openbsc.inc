@@ -11,17 +11,11 @@ SRC_URI = "file://osmo-nitb.init \
 	   file://osmo-bsc-sccplite.service \
 	   "
 
-INC_PR = "r25.${META_TELEPHONY_OSMO_INC}"
-
+INC_PR = "r0.${META_TELEPHONY_OSMO_INC}"
 
 EXTRA_OECONF += "--enable-osmo-bsc --enable-smpp --enable-mgcp-transcoding --with-g729"
 
 inherit autotools update-rc.d pkgconfig
-
-# because "${WORKDIR}/git" is not a git repo, it can't figure out the version
-do_configure_prepend() {
-	echo "${PV}" > ${S}/.tarball-version
-}
 
 do_install_append() {
 	install -d ${D}${sysconfdir}/osmocom
