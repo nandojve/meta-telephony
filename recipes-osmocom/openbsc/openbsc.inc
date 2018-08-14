@@ -36,6 +36,18 @@ do_install_append() {
 
 	install -d ${D}/var/lib/osmocom
 
+	# osmo-bsc_mgcp is provided by osmo-mgw.bb
+	rm ${D}${bindir}/osmo-bsc_mgcp
+
+	# provided by osmo-bsc.bb:
+	rm ${D}${bindir}/ipaccess-config
+	rm ${D}${bindir}/ipaccess-proxy
+	rm ${D}${bindir}/osmo-meas-udp2db
+	rm ${D}${bindir}/isdnsync
+	rm ${D}${bindir}/bs11_config
+	rm ${D}${bindir}/abisip-find
+	rm ${D}${bindir}/meas_json
+	rm ${D}${bindir}/osmo-meas-pcap2db
 }
 
 PACKAGES =+ "osmo-bsc-nat osmo-bsc-sccplite osmo-nitb"
